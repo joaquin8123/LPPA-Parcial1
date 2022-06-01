@@ -1,6 +1,8 @@
 window.onload = function(){
 
     let buttonSubmit = document.getElementById('button-submit');
+    let modal = document.getElementById("myModal");
+    let span = document.getElementsByClassName("close")[0];
 
     buttonSubmit.addEventListener("click", function () {
         validarApellido()
@@ -10,9 +12,13 @@ window.onload = function(){
         validarSexo()
         validarJugador()
         validarPais()
+        if( validarApellido() && validarNombre() && validarEmail() && validarEdad() && validarSexo() && validarJugador() && validarPais()){
+            modal.style.display = "block";
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        }
     })
-
-
 
 }
 
@@ -59,7 +65,8 @@ function validarEmail(){
 function validarEdad(){
     let edad = document.getElementById('edad');
     let edadError = document.getElementById('edadError');
-    if (parseInt(edad.value) < 0 || parseInt(edad.value) > 99 || edad.value=='' ) {
+    console.log();
+    if (parseInt(edad.value) < 0 || parseInt(edad.value) > 99 || edad.value=='' || !Number.isInteger(parseInt(edad.value))) {
         edadError.classList.remove('hiddenError');
         return false
     }else{
@@ -87,7 +94,7 @@ function validarJugador(){
     let jugadorError = document.getElementById('jugadorError');
     if (!jugador1.checked && !jugador2.checked && !jugador3.checked) {
         jugadorError.classList.remove('hiddenError');
-      return false
+        return false
     }else{
         jugadorError.classList.add('hiddenError');
     }
