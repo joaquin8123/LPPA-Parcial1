@@ -1,17 +1,15 @@
 window.onload = function(){
 
     let buttonSubmit = document.getElementById('button-submit');
-   
-    
-  
-    let edad = document.getElementById('edad');
 
     buttonSubmit.addEventListener("click", function () {
         validarApellido()
         validarNombre()
         validarEmail()
         validarEdad()
-        // validarSexo()
+        validarSexo()
+        validarJugador()
+        validarPais()
     })
 
 
@@ -70,18 +68,43 @@ function validarEdad(){
     return true
 }
 
-// function validarSexo(){
-//     let hombre = document.getElementById('hombre');
-//     let mujer = document.getElementById('mujer');
-//     let otro = document.getElementById('otro');
-//     let sexoError = document.getElementById('sexoError');
-//     console.log(hombre,mujer,otro);
-//     if (!hombre.value || !mujer.value || !otro.value ) {
-//         console.log('Error sexo');
-//         edadError.classList.remove('hiddenError');
-//       return false
-//     }else{
-//         edadError.classList.add('hiddenError');
-//     }
-//     return true
-// }
+function validarSexo(){
+    let pais = document.getElementById('pais');
+    let paisError = document.getElementById('paisError');
+    if (pais.value =='null') {
+        paisError.classList.remove('hiddenError');
+      return false
+    }else{
+        paisError.classList.add('hiddenError');
+    }
+    return true
+}
+
+function validarJugador(){
+    let jugador1 = document.getElementById('jugador1');
+    let jugador2 = document.getElementById('jugador2');
+    let jugador3 = document.getElementById('jugador3');
+    let jugadorError = document.getElementById('jugadorError');
+    if (!jugador1.checked && !jugador2.checked && !jugador3.checked) {
+        jugadorError.classList.remove('hiddenError');
+      return false
+    }else{
+        jugadorError.classList.add('hiddenError');
+    }
+    return true
+}
+
+function validarPais(){
+    let hombre = document.getElementById('hombre');
+    let mujer = document.getElementById('mujer');
+    let otro = document.getElementById('otro');
+    let sexoError = document.getElementById('sexoError');
+
+    if (!hombre.checked && !mujer.checked && !otro.checked) {
+        sexoError.classList.remove('hiddenError');
+      return false
+    }else{
+        sexoError.classList.add('hiddenError');
+    }
+    return true
+}

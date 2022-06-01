@@ -55,34 +55,38 @@
                           <label for="otro">Otro</label>
                         </div>
                     </fieldset>
+                    <p id="sexoError" class="hiddenError">Debe seleccionar un sexo</p>
                     <fieldset class="form-container">
                         <legend>Seleccione cuales de estos jugadores haran un gol:</legend>
                     
                         <div class="form-container-div">
-                          <input type="checkbox" id="scales" name="scales"
+                          <input type="checkbox" id="jugador1" name="jugador1"
                                  checked>
-                          <label for="scales">Messi</label>
+                          <label for="jugador1">Messi</label>
                         </div>
                     
                         <div class="form-container-div">
-                          <input type="checkbox" id="horns" name="horns">
-                          <label for="horns">De Paul</label>
+                          <input type="checkbox" id="jugador2" name="jugador2">
+                          <label for="jugador2">De Paul</label>
                         </div>
                         <div class="form-container-div">
-                            <input type="checkbox" id="horns" name="horns">
-                            <label for="horns">Verrati</label>
+                            <input type="checkbox" id="jugador3" name="jugador3">
+                            <label for="jugador3">Verrati</label>
                         </div>
                     </fieldset>
+                    <p id="jugadorError" class="hiddenError">Debe seleccionar al menos 1 jugador</p>
                     <div class="form-container">
                         <label for="pais">Seleccione su pais:</label>
     
                         <select name="paises" id="pais">
+                            <option value="null">Selecciona un pais</option>
                             <option value="argentina">Argentina</option>
                             <option value="brasil">Brasil</option>
-                            <option value="chike">Chile</option>
+                            <option value="chile">Chile</option>
                             <option value="uruguay">Uruguay</option>
                         </select>
                     </div>
+                    <p id="paisError" class="hiddenError">Debe seleccionar el pais</p>
                     <div class="form-container">
                         <label for="comentario">Comentario</label>
                         <textarea name="comentario" id="comentario" cols="40" rows="5"></textarea>
