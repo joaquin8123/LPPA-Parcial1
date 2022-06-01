@@ -14,69 +14,81 @@
     </header>
     <main>
         <section>
-            
             <div class="contenedor-form">
                 <form class="formulario" action="">
-                    <input type="text" placeholder="Nombre">
-                    <input type="text" placeholder="Apellido">
-                    <input type="text" placeholder="Email">
-                    <input type="text" placeholder="Edad">
-                    <fieldset class="input-radio">
+                    <div class="form-container">
+                        <div>
+                            <input type="text" placeholder="Nombre">
+                            <p>El nombre debe tener al menos 3 letras</p>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Apellido">
+                            <p>El apellido debe tener al menos 3 letras</p>
+                        </div>
+                    </div>
+                    <div class="form-container">
+                        <div>
+                            <input type="text" placeholder="Email">
+                            <p>Email invalido</p>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Apellido">
+                            <p>Numero enteros 0-99</p>
+                        </div>
+                    </div>
+                    <fieldset class="form-container">
                         <legend>Sexo:</legend>
                     
-                        <div>
+                        <div class="form-container-div">
                           <input type="radio" id="hombre" name="sexo" value="hombre">
                           <label for="hombre">Hombre</label>
                         </div>
                     
-                        <div>
+                        <div lass="form-container-div">
                           <input type="radio" id="mujer" name="sexo" value="mujer">
                           <label for="mujer">Mujer</label>
                         </div>
                     
-                        <div>
+                        <div lass="form-container-div">
                           <input type="radio" id="otro" name="sexo" value="otro">
                           <label for="otro">Otro</label>
                         </div>
                     </fieldset>
-                    <fieldset>
-                        <legend>Seleccione cuales de estos jugadores veran la tarjeta amarilla:</legend>
+                    <fieldset class="form-container">
+                        <legend>Seleccione cuales de estos jugadores haran un gol:</legend>
                     
-                        <div>
+                        <div class="form-container-div">
                           <input type="checkbox" id="scales" name="scales"
                                  checked>
                           <label for="scales">Messi</label>
                         </div>
                     
-                        <div>
+                        <div class="form-container-div">
                           <input type="checkbox" id="horns" name="horns">
                           <label for="horns">De Paul</label>
                         </div>
-                        <div>
+                        <div class="form-container-div">
                             <input type="checkbox" id="horns" name="horns">
                             <label for="horns">Verrati</label>
                         </div>
-                        <div>
-                            <input type="checkbox" id="horns" name="horns">
-                            <label for="horns">Donnaruma</label>
-                        </div>
                     </fieldset>
-                    <label for="pais">Seleccione su pais:</label>
-
-                    <select name="paises" id="pais">
-                        <option value="argentina">Argentina</option>
-                        <option value="brasil">Brasil</option>
-                        <option value="chike">Chile</option>
-                        <option value="uruguay">Uruguay</option>
-                    </select>
-                    <div>
+                    <div class="form-container">
+                        <label for="pais">Seleccione su pais:</label>
+    
+                        <select name="paises" id="pais">
+                            <option value="argentina">Argentina</option>
+                            <option value="brasil">Brasil</option>
+                            <option value="chike">Chile</option>
+                            <option value="uruguay">Uruguay</option>
+                        </select>
+                    </div>
+                    <div class="form-container">
                         <label for="comentario">Comentario</label>
-                        <br>
                         <textarea name="comentario" id="comentario" cols="40" rows="5"></textarea>
                     </div>
-                    <button type="button">
-                        Enviar
-                    </button>
+                    <div class="form-container">
+                        <button type="button">Enviar</button>    
+                    </div>
                 </form>
             </div>
         </section>
