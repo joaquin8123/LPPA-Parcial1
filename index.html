@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteo finalissima</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Ganate una entrada completando el siguiente formulario</h1>
+    </header>
+    <main>
+        <section>
+            
+            <div class="contenedor-form">
+                <form class="formulario" action="">
+                    <input type="text" placeholder="Nombre">
+                    <input type="text" placeholder="Apellido">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Edad">
+                    <fieldset class="input-radio">
+                        <legend>Sexo:</legend>
+                    
+                        <div>
+                          <input type="radio" id="hombre" name="sexo" value="hombre">
+                          <label for="hombre">Hombre</label>
+                        </div>
+                    
+                        <div>
+                          <input type="radio" id="mujer" name="sexo" value="mujer">
+                          <label for="mujer">Mujer</label>
+                        </div>
+                    
+                        <div>
+                          <input type="radio" id="otro" name="sexo" value="otro">
+                          <label for="otro">Otro</label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Seleccione cuales de estos jugadores veran la tarjeta amarilla:</legend>
+                    
+                        <div>
+                          <input type="checkbox" id="scales" name="scales"
+                                 checked>
+                          <label for="scales">Messi</label>
+                        </div>
+                    
+                        <div>
+                          <input type="checkbox" id="horns" name="horns">
+                          <label for="horns">De Paul</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="horns" name="horns">
+                            <label for="horns">Verrati</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="horns" name="horns">
+                            <label for="horns">Donnaruma</label>
+                        </div>
+                    </fieldset>
+                    <label for="pais">Seleccione su pais:</label>
+
+                    <select name="paises" id="pais">
+                        <option value="argentina">Argentina</option>
+                        <option value="brasil">Brasil</option>
+                        <option value="chike">Chile</option>
+                        <option value="uruguay">Uruguay</option>
+                    </select>
+                    <div>
+                        <label for="comentario">Comentario</label>
+                        <br>
+                        <textarea name="comentario" id="comentario" cols="40" rows="5"></textarea>
+                    </div>
+                    <button type="button">
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h1>Todos Los Derechos Reservados © 2022</h1>
+    </footer>
+</body>
+</html>
