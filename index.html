@@ -7,6 +7,7 @@
     <title>Sorteo finalissima</title>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="form-validations.js"></script>
 </head>
 <body>
     <header>
@@ -15,25 +16,25 @@
     <main>
         <section>
             <div class="contenedor-form">
-                <form class="formulario" action="">
+                <form class="formulario" action="javascript:void(0);">
                     <div class="form-container">
                         <div>
-                            <input type="text" placeholder="Nombre">
-                            <p>El nombre debe tener al menos 3 letras</p>
+                            <input type="text" id="nombre" placeholder="Nombre">
+                            <p id="nombreError" class="hiddenError">El nombre debe tener al menos 3 letras</p>
                         </div>
                         <div>
-                            <input type="text" placeholder="Apellido">
-                            <p>El apellido debe tener al menos 3 letras</p>
+                            <input type="text" id="apellido" placeholder="Apellido">
+                            <p id="apellidoError" class="hiddenError">El apellido debe tener al menos 3 letras</p>
                         </div>
                     </div>
                     <div class="form-container">
                         <div>
-                            <input type="text" placeholder="Email">
-                            <p>Email invalido</p>
+                            <input type="text" id="email" placeholder="Email">
+                            <p id="emailError" class="hiddenError">Email invalido</p>
                         </div>
                         <div>
-                            <input type="text" placeholder="Apellido">
-                            <p>Numero enteros 0-99</p>
+                            <input type="text" id="edad" placeholder="Edad">
+                            <p id="edadError" class="hiddenError">Numero enteros 0-99</p>
                         </div>
                     </div>
                     <fieldset class="form-container">
@@ -87,7 +88,7 @@
                         <textarea name="comentario" id="comentario" cols="40" rows="5"></textarea>
                     </div>
                     <div class="form-container">
-                        <button type="button">Enviar</button>    
+                        <button id="button-submit" type="button" onclick="submit()">Enviar</button>    
                     </div>
                 </form>
             </div>

@@ -68,6 +68,9 @@ footer{
     width: 52px;
     margin-right: 15px;
 }
+.hiddenError{
+    display: none;
+}
 
 @media all and (max-width: 475px) {
     
